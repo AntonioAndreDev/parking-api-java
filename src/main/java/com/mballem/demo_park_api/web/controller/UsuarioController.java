@@ -129,6 +129,7 @@ public class UsuarioController {
     @Operation(
             summary = "Apagar um usuário pelo id",
             description = "Recurso para apagar um usuário pelo id",
+            security = @SecurityRequirement(name = "security"),
             responses = {
                     @ApiResponse(
                             responseCode = "200",
