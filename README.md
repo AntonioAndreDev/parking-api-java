@@ -1,4 +1,4 @@
-# Parking API Java - API de Estacionamento com Java
+# 🚗 Parking API Java - API de Estacionamento com Java
 
 > Esse projeto consiste em um sistema de gerenciamento de estacionamentos, onde os clientes podem estacionar seu(s) veículo(s) nas vagas disponíveis e o administrador lida com toda a gestão do estacionamento.
 
