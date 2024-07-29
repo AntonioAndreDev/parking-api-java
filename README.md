@@ -1,18 +1,17 @@
 # Parking API Java - API de Estacionamento com Java
 
-<img src="imagem.png" alt="Alt imagem">
-
 > Esse projeto consiste em um sistema de gerenciamento de estacionamentos, onde os clientes podem estacionar seu(s) veículo(s) nas vagas disponíveis e o administrador lida com toda a gestão do estacionamento.
 
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atende aos seguintes requisitos:
 
-- Você instalou a versão mais recente de `<java / SDK 21.0.2>`
-- Você tem instalado alguma ferramenta para testes de APIs, essas são as que recomendo `<Postman / Insomnia>`. Fique à vontade para usar a que preferir
-- Você possui instalado alguma IDE que suporta Java eu recomendo `<IntelliJ IDEA>`, que será o exemplo de instalação nesse arquivo.
+- Versão utilizada no projeto de `<java / SDK 21.0.2>`
+- Alguma ferramenta para testes de APIs, essas são as que recomendo `<Postman / Insomnia>`. Fique à vontade para usar a que preferir
+- IDE que suporta Java eu recomendo `<IntelliJ IDEA>`, que será o exemplo de instalação nesse arquivo.
+- Você deve possuir alguma banco de dados instalado e configurado na sua máquina. Nesse projeto foi utilizado, por padrão, o `<PostgresSQL>`.
 
-## 🚀 Clonando Parking API Java com IntelliJ IDEA
+## 🚀 Clonando Parking API Java
 
 Para clonar o projeto, siga essa etapa:
 
@@ -27,29 +26,48 @@ ou
 git clone git@github.com:AntonioAndreDev/parking-api-java.git
 ```
 
-## ☕ Usando <nome_do_projeto>
+## ⚙️ Setando as variáveis de ambiente com IntelliJ IDEA
 
-Para usar Parking API Java, siga estas etapas:
+Nesse projeto temos algumas variáveis de ambiente, são elas:
+- db_password -> senha do seu banco de dados
+- db_user -> usuário do seu banco de dados
+- db_port -> porta de execução do seu banco de dados
+- server_port -> porta de execução da API (se não declarado, a porta padrão será `8080`)
+- SECRET_KEY_JWT -> chave que irá criptograr o JWT Token
 
+## 🎲 Conexão com banco de dados PostgresSQL
+
+No arquivo presente no caminho `resources/application.properties` estão presentes as configurações gerais de projeto, entre eles a conexão com o PostgresSQL <br/>
+`spring.datasource.url=jdbc:postgresql://localhost:${db_port}/demo` <br/>
+`spring.datasource.username=${db_user}` <br/> 
+`spring.datasource.password=${db_password}` <br/>
+`spring.datasource.driver-class-name=org.postgresql.Driver` <br/>
+
+> ⚠️ Lembre-se de setar as variáveis de ambiente!
+
+## ▶️ Executando Parking API Java
+
+Para executar o projeto, siga esta etapa:
+- Execute o arquivo `DemoParkApiApplication`
+Caso tudo der certo, no terminal/console da sua IDE vai mostrar que a aplicação está em execução na porta `8080` ou na porta que foi definida na variável de ambiente `server_port`.
+
+## 🛣️ Conferindo as rotas da aplicação
+
+Esse projeto foi inteiramente documentado utilizando Swagger. Portando, é possível conferir todos os _endpoints_ da aplicação, suas funcionalidades, suas respostas à requisições, sua necessidade ou não de autenticação e seus erros de requisições por meio desse caminho abaixo.
+
+No seu navegador acesse:
 ```
-<exemplo_de_uso>
+http://localhost:8080/docs-park.html
 ```
+> ⚠️ Se você alterou a variável de ambiente `server_port` lembre-se de trocar 8080 pelo valor que foi atribuído à server_port!
 
-## 🤝 Colaboradores
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
-
-<table>
-  <tr>
-    <td align="center">
-        <img src="https://github.com/antonioandredev.png" width="100px;" alt="Foto do Antonio Andre no GitHub"/><br>
-        <sub>
-          <b>Antônio André</b>
-        </sub>
-    </td>
-  </tr>
-</table>
-
-## 📝 Licença
-
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+## 🌟 Funcionalidades implementadas
+- [X] Validação de dados
+- [X] Tratamento de exceções personalizados
+- [X] Documentação com Swagger
+- [X] Teste ponta a ponta (end-to-end)
+- [X] Autenticação e autorização com JWT Token
+- [X] Utilização de DTO para transferência de dados entre o cliente e o servidor
+- [X] JasperReports para geração de relatórios
+- [X] Internacionalização de mensagens de erros em pt_BR, en (inglês) e es (espanhol)
