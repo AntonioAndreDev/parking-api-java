@@ -62,7 +62,7 @@ http://localhost:8080/docs-park.html
 > ⚠️ Se você alterou a variável de ambiente `server_port` lembre-se de trocar 8080 pelo valor que foi atribuído à server_port!
 
 
-## 🌟 Funcionalidades implementadas
+## 🌟 Funcionalidades
 - [X] Validação de dados
 - [X] Tratamento de exceções personalizados
 - [X] Documentação com Swagger
@@ -71,3 +71,7 @@ http://localhost:8080/docs-park.html
 - [X] Utilização de DTO para transferência de dados entre o cliente e o servidor
 - [X] JasperReports para geração de relatórios
 - [X] Internacionalização de mensagens de erros em pt_BR, en (inglês) e es (espanhol)
+
+##
+
+> ⭐ Se esse projeto pode te ajudar, deixe uma estrela nesse repositório!
