@@ -2,6 +2,10 @@
 
 > Esse projeto consiste em um sistema de gerenciamento de estacionamentos, onde os clientes podem estacionar seu(s) veículo(s) nas vagas disponíveis e o administrador lida com toda a gestão do estacionamento.
 
+<div align="center">
+  <img src="https://i.ibb.co/hKD7RgH/projeto-spring-boot-park-api-logo.png" alt="projeto-spring-boot-park-api-logo">
+</div>
+
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atende aos seguintes requisitos:
